@@ -38,7 +38,9 @@ android {
 }
 
 dependencies {
+    val room_version = "2.6.1"
 
+    annotationProcessor("androidx.room:room-compiler:$room_version")
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
     implementation(libs.material)
@@ -52,6 +54,7 @@ dependencies {
     implementation(libs.json.serialization)
     implementation(libs.room.runtime)
     implementation(libs.room.ktx)
+    implementation("androidx.room:room-runtime:$room_version")
     ksp(libs.room.compiler)
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
